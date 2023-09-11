@@ -7,14 +7,26 @@
         <article class="site-blog-details">
           <p><span>{{ .PublishDate.Format "January 2, 2006" }}</span> by <span>{{ .Params.author }}</span></p>
           <h2 class="blog-title">{{ .Title }}</h2>
-          <img class="feature-image" src="{{ .Params.feature_image | absURL }}" alt="blog-feature-image">
+          <img
+            class="feature-image"
+            src="{{ .Params.feature_image | absURL }}"
+            alt="blog-feature-image"
+          />
           {{ .Content }}
         </article>
       </div>
     </div>
   </div>
 </section>
+<script
+  defer
+  src="https://cdn.commento.io/js/commento.js"
+></script>
+<div id="commento"></div>
 
-{{ partial "call-to-action.html" . }}
-
-{{ end }}
+<div id="commento"></div>
+<script
+  defer
+  src="{{ .Site.Params.CommentoURL }}/js/commento.js"
+></script>
+{{ partial "call-to-action.html" . }} {{ end }}

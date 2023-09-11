@@ -1,0 +1,52 @@
+{
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    },
+    "Command Prompt": {
+      "path": ["${env:windir}\\Sysnative\\cmd.exe", "${env:windir}\\System32\\cmd.exe"],
+      "args": [],
+      "icon": "terminal-cmd"
+    },
+    "Git Bash": {
+      "source": "Git Bash"
+    },
+    "Windows PowerShell": {
+      "path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+    }
+  },
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.tabSize": 2,
+  "workbench.iconTheme": "vscode-icons",
+  "redhat.telemetry.enabled": false,
+  "workbench.startupEditor": "none",
+  "workbench.editor.labelFormat": "short",
+  "editor.formatOnSave": false,
+  "go.alternateTools": {},
+  "prettier.bracketSpacing": false,
+  "prettier.singleAttributePerLine": false,
+  "prettier.embeddedLanguageFormatting": "off",
+  "prettier.quoteProps": "preserve",
+  "editor.wordWrap": "off",
+  "prettier.printWidth": 1200,
+  "editor.trimAutoWhitespace": false,
+  "editor.smartSelect.selectLeadingAndTrailingWhitespace": false,
+  "editor.accessibilitySupport": "off",
+  "workbench.colorTheme": "Monokai++",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "reactSnippets.settings.prettierEnabled": true,
+  "editor.defaultFormatter": "czx",
+  "css.format.spaceAroundSelectorSeparator": true,
+  "less.format.spaceAroundSelectorSeparator": true,
+  "scss.format.spaceAroundSelectorSeparator": true
+}

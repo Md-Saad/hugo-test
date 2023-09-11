@@ -2,7 +2,9 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <div class="site-footer-logo"><a href="{{ .Site.BaseURL }}"><img src="{{ "images/logo-footer.png" | absURL }}" alt="logo-footer"></a></div>
+        <div class="site-footer-logo">
+          <a href="{{ .Site.BaseURL }}"><img src="{{ "images/logo-footer.png" | absURL }}" alt="logo-footer"></a>
+        </div>
       </div>
       {{ with .Site.Params.footer.contactInfo }}
       <div class="col-lg-3 col-md-6">
@@ -10,15 +12,14 @@
           <h5 class="site-footer-widget-title">{{ .title }}</h5>
           <p class="site-footer-widget-description">
             {{ .address | safeHTML }}
-            <br>
+            <br />
             <a href="tel:{{ .phone }}">{{ .phone }}</a>
-            <br>
+            <br />
             <a href="mailto:{{ .email }}">{{ .email }}</a>
           </p>
         </div>
       </div>
-      {{ end }}
-      {{ with .Site.Params.footer.sitemap }}
+      {{ end }} {{ with .Site.Params.footer.sitemap }}
       <div class="col-lg-2 col-md-6">
         <div class="site-footer-widget">
           <h5 class="site-footer-widget-title">{{ .title }}</h5>
@@ -29,42 +30,48 @@
           </ul>
         </div>
       </div>
-      {{ end }}
-      {{ with .Site.Params.footer.social }}
+      {{ end }} {{ with .Site.Params.footer.social }}
       <div class="col-lg-2 col-md-6">
         <div class="site-footer-widget">
           <h5 class="site-footer-widget-title">{{ .title }}</h5>
           <ul class="site-footer-widget-links">
             {{ range .link }}
-              <li><a href="{{ .url }}">{{ .name }}</a></li>
+            <li><a href="{{ .url }}">{{ .name }}</a></li>
             {{ end }}
           </ul>
         </div>
       </div>
-      {{ end }}
-      {{ with .Site.Params.footer.service }}
+      {{ end }} {{ with .Site.Params.footer.service }}
       <div class="col-lg-3 col-md-6">
         <div class="site-footer-widget">
           <h5 class="site-footer-widget-title">{{ .title }}</h5>
-          <p class="site-footer-widget-description">
-            {{ .description | safeHTML }}
-          </p>
+          <p class="site-footer-widget-description">{{ .description | safeHTML }}</p>
         </div>
       </div>
       {{ end }}
       <div class="col-lg-2 col-12">
-        <a href="#top" class="site-footer-widget-top">
+        <a
+          href="#top"
+          class="site-footer-widget-top"
+        >
           <img src="{{ "images/to-top.svg" | absURL }}" alt="back-to-top">
           <p>
-            I want to 
-            <br>
+            I want to
+            <br />
             visit again
           </p>
         </a>
       </div>
       <div class="col-12">
         <div class="site-footer-copyright">
-          <p>© Copyright {{ dateFormat "2006" now }} - All Rights Reserved by <a href="https://staticmania.com/" target="_blank">StaticMania</a> </p>
+          <p>
+            © Copyright {{ dateFormat "2006" now }} - All Rights Reserved by
+            <a
+              href="https://staticmania.com/"
+              target="_blank"
+              >StaticMania</a
+            >
+          </p>
         </div>
       </div>
     </div>
@@ -75,5 +82,18 @@
 <script src="{{ $formhandler.Permalink }}"></script> -->
 {{ $vendor := resources.Get "js/vendor.js" | minify }}
 <script src="{{ $vendor.Permalink }}"></script>
+<script
+  type="text/javascript"
+  id="snipcart"
+  src="https://cdn.snipcart.com/scripts/2.0/snipcart.js"
+  data-api-key="OTY2N2FkM2UtZTQ4My00NzUxLTg2ODEtYzFmNTliYWNmZWY5NjM4MzAwMjk4ODY3MDc1NTk4"
+></script>
+
+<script>
+  Snipcart.execute('registerLocale', 'en', {
+      powered_by:
+      "staticmania"
+  });
+</script>
 {{ $script := resources.Get "js/script.js" | minify }}
 <script src="{{ $script.Permalink }}"></script>
