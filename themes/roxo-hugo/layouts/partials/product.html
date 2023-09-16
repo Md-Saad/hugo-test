@@ -18,7 +18,7 @@
               data-item-name="{{ .name }}"
               data-item-price="{{ .price }}"
               data-item-image="{{ .image  | absURL }}"
-              data-item-url="/">
+              data-item-url="{{ .url | absURL }}">
                 Add to cart
             </button>
           </div>
