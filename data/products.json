@@ -5,7 +5,7 @@
     "price": 34.87,
     "image": "images/projects/project-thumb-four.jpg",
     "description": "nIvbogh tlhIngan dictionary qaStaHvIS veng SuvwI'",
-    "url": "product1"
+    "url": "https://test-hugosite.netlify.app/"
   },
   {
     "id": "2",
@@ -13,6 +13,6 @@
     "description": "The Original Series Phaser comprises a small, hand-held Type I Phaser, which slots into a larger Type II Phaser body with a removable pistol-grip.",
     "price": 145.98,
     "image": "images/projects/project-thumb-three.jpg",
-    "url": "product2"
+    "url": "https://test-hugosite.netlify.app/"
   }
 ]
