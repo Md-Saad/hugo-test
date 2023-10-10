@@ -1,10 +1,11 @@
 
+
 {{ $products := getJSON "/data/products.json" }}
 <section class="products">
   <div class="container">
     <div class="row">
       {{ range $products }}
-      <div class="col-md-6 mb-5">
+      <div class="col-md-4 mb-5">
         <div class="card w-100">
           <div class="card-image">
             <img src="{{ .image  | absURL }}" alt=" sadsa " class="card-img-top w-100">
@@ -12,13 +13,18 @@
           <div class="card-body">
             <h5 class="card-title">{{ .name }}</h5>
             <p class="card-text">{{ .description }}</p>
+            <p class="card-text">{{ .customnName }} :  <strong>{{ delimit .options ", " }}</strong></p>            
             <button
               class="snipcart-add-item btn btn-sm btn-primary"
               data-item-id="{{ .id }}"
               data-item-name="{{ .name }}"
               data-item-price="{{ .price }}"
               data-item-image="{{ .image  | absURL }}"
-              data-item-url="{{ .url | absURL }}">
+              data-item-description="{{ .description }}"
+              data-item-url="{{ .url | absURL }}"
+              data-item-custom1-name="{{ .customnName }}"
+              data-item-custom1-options="{{ delimit .options "|" }}"
+              >
                 Add to cart
             </button>
           </div>

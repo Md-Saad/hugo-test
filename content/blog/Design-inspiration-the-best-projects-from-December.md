@@ -34,3 +34,15 @@ Black Lines wants it to be as easy to serve a Negroni as it is a pint of lager. 
 
 > Paul Rand, graphic designer
 
+
+
+## Section 1
+Some content here.
+
+### Subsection 1.1
+More content.
+
+{{< custom-toc >}}
+
+## Section 2
+Another section.

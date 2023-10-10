@@ -4,6 +4,7 @@ title         = "Roxo | Creative Design Agency"
 theme         = "roxo-hugo"
 summarylength = 25
 CommentoURL = "https://cdn.commento.io"
+Copyright = "dsadsa"
 # Site Menus
 [menu]
   # Navbar Menus
@@ -129,3 +130,25 @@ CommentoURL = "https://cdn.commento.io"
       [params.footer.service]
         title       = "We help brands:"
         description = "develop design solutions<br>produce valuable cultural content<br>create fresh brand experience"
+[markup]
+  [markup.tableOfContents]
+    startLevel = 3
+    ordered = true
+    endLevel = 5
+    
+[sitemap]
+  changeFreq = 'always'
+  filename = 'sitemap1.xml'
+  priority = -1
+  
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  
+[outputs.RSS]
+  title = "My Custom RSS Feed Title"
+  description = "Stay updated with the latest content from MyWebsite."
+  link = "/"
+
+[Author]
+    name = "Justin James"
+    email  = "me@example.com"
